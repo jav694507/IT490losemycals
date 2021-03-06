@@ -1,0 +1,49 @@
+
+<!-- User Login -->
+<html lang = "en">
+ <head>
+  <title> HHR User Login Validation & Verification </title>
+<!--  <script type = "text/javascript" src = "As4.js"></script>
+  <link rel = "stylesheet" type="text/css" href = "as4.css" />-->
+ </head>
+	<body style="background-color: aqua;">
+		<h1> House Hunter's Reality Login </h1>
+	<!--	<form id = "UInput" action = "A4.php" method ="post" onsubmit="return chkName();"> -->
+		<p>
+<!-- text boxes for name Realtor Name, ID, and email -->
+		<label> Realtor First Name: 
+			<input type = "text" id = "fname" name = "fname" size = "30" maxlength = "30" /><span id="req" style = "visibility: hidden">*</span></label>
+		<br />
+	        <label> Realtor Last Name: 
+		        <input type = "text" id = "lname" name = "lname" size = "30" maxlength = "30" /><span id="req5" style = "visibility: hidden">*</span></label> 
+		<br />
+		<label> Realtor ID: 
+			<input type = "number" id = "ID" name = "ID" /><span id="req2" style = "visibility: hidden">*</span></label>
+		<br />
+		<label> Email:
+			<input type = "text" id = "email" name = "email" size = "30" /><span id="req3" style = "visibility: hidden">*</span></label> 
+		<br /> 
+		<label> Password:
+			<input type = "password" id = "psw" name = "psw" size ="8" maxlength = "8" /> <span id="req4" style = "visibility: hidden">*</span></label>
+		<br /> 
+
+<!-- checkbox and select transaction -->
+		<label style = "font-size: 20px;"><input type = "checkbox" id= "emailme" name = "EmailConfirmation" value = "confirmed"/> Request email confirmation </label>
+		<br /><br />
+		<select name = "transaction" id = "trans">
+			<option value ="sched"> Schedule a Showing </option>
+			<option value = "cancel"> Cancel a Showing </option>
+			<option value= "search"> Search for Showing(s) </option>
+			<option value="register"> Register/Create an Account </option>
+		</select>
+		<br /><br />
+<!-- the Continue buttons -->
+	<input type = "submit" value = "Continue"/>	
+	</body>
+		</form> 
+	
+	
+</html>
+	
+		
+		
