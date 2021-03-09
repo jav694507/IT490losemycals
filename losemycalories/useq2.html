@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- User Questionaire for Calorie intake Choices -->
+<html lang = "en">
+<head>
+<title> Meal Reccomendation Questionaire </title>
+<met charset = "UTF-8" />
+<style>
+body{
+background-color: khaki;
+}
+</style>
+</head>
+<body>
+	<h1> Registration Page </h1>
+
+<!-- dropdown options for client to choose from and pass it to rabbitmq to api -->
+<br /><br />
+<h2> This is where we want to get to know you a bit better!</h2>
+<p> 
+<?php session_start();
+?>
+<br /><br /><br />
+<p> <form name="requestrecipe" action ="newclientdiet.php" method ="get">
+<p>How many calories for your breakfast meal?
+           <select name = "bfastcals" id = "bfastcals" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value = "300">~300</option>
+                <option value = "600">~600</option>
+                <option value = "900"> ~900</option>
+           </select>
+<br />
+<label> Name of Food/Ingredient:<input type = "text" id = "food" name ="food" size ="20" maxlength = "30" required/><br /><span id="req" style = "visibility: hidden">*</span></label>
+<br />
+<input type="submit" value = "Continue"/>
+</form>
+</body>
+</html>
