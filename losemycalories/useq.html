@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
 <head>
-<meta charset="utf-8"/>
-<title> User Questionaire </title>
+<meta charset ="utf-8"/>
+<title> User Registration </title>
 <style>
 body{
 background-color: khaki;
@@ -10,12 +10,11 @@ background-color: khaki;
 </style>
 </head>
 <body>
-<script src="uservalidate.js"></script>
+<script src = "uservalidate.js"></script>
 
-<h1> This will be the Questionair/CreateAnAccount Page </h1>
-
+<h1> Registration Page </h1>
 <p>
-<form name="createuserform" action ="usercreate.php" method ="post" onsubmit= "return verifynewuser();">
+<form name = "createuserform" action ="usercreate.php" method ="post" onsubmit= "return verifynewuser();">
 
 
 <label> First Name:<input type = "text" id = "fname" name ="fname" size ="20" maxlength = "30" required/><br /><span id="req" style = "visibility: hidden">*</span></label>
@@ -27,51 +26,16 @@ background-color: khaki;
 <label> Date of birth (MM/DD/YYYY):
         <input type = "text" id = "dob" name ="dob" size ="20" maxlength = "30" required /><br /><span id="req2" style = "visibility: hidden">*</span></label>
 <br />
-<label> Username (email option not set):
-        <input type = "text" id = "uname" name ="uname" size ="20" maxlength = "25" required /><br /><span id="req3" style = "visibility: hidden">*</span></label>
-<br />
 <label> Email:
-        <input type = "text" id = "email" name ="email" size ="30" required /><br /><span id="req4" style = "visibility: hidden">*</span></label>
+        <input type = "text" id = "email" name ="email" size ="30" required /><br /><span id="req4" style = "visibility: hidden">*Incorrect format</span></label>
 <br />
 <label> Password:
-        <input type = "text" id = "passw" name ="passw" size ="20" maxlength = "30" required /><br /><span id="req5" style = "visibility: hidden">*</span></label>
+        <input type = "text" id = "passw" name ="passw" size ="20" maxlength = "30" required /><br /><span id="req5" style = "visibility: hidden">*Password must contain at least one number, uppercase and >5 characters</span></label>
 <br />
 <label> Confirm Password:
-        <input type = "text" id = "passwc" name ="passwc" size ="20" maxlength = "30" required/><br /><span id="req6" style = "visibility: hidden">*</span></label>
+        <input type = "text" id = "passwc" name ="passwc" size ="20" maxlength = "30" required/><br /><span id="req6" style = "visibility: hidden">*Passwords much match</span></label>
 <br />
-<p>Gender: <select name = "gend" id = "gender" required>
-		<option disabled selected value> -- select an option -- </option>
-		<option value = "m"> Male</option>
-		<option value = "f">Female</option>
-		<option value = "x"> Do not wish to answer</option>
-	   </select>
-<br /><br />
-<h2> This is where we want to get to know you a bit better!</h2>
-<p> Below are questions along with options to choose from. The options you choose will be processed to produce the best calorie plan to fit your needs and goals. 
-<br /><br /><br />
-<p>Are you trying to gain or lose weight? Or Neither?
-	   <select name = "goal" id = "goal" required>
-		<option disabled selected value> -- select an option -- </option>
-                <option value = "gain"> Gain</option>
-                <option value = "lose">Lose</option>
-                <option value = "none"> None</option>
-           </select>
-<p>How much would you spend for a meal? 
-           <select name = "budget" id = "budget" required>
-		<option disabled selected value> -- select an option -- </option>
-                <option value = "20">20</option>
-                <option value = "30">50</option>
-                <option value = "100">100</option>
-           </select>
-<p>How much physical activity do you perform in a day?                   
-           <select name = "excersierate" id = "exerciserate" required>
-		<option disabled selected value> -- select an option -- </option>
-                <option value = "low">less than 1hr</option> 
-                <option value = "moderate">1-2 hr</option>
-                <option value = "high"> more than 3 hr</option>
-           </select>
-
-<input type="submit" value = "Continue"/>
+<input type = "submit" value = "Continue"/>
 </form>
 </body>
 </html>
