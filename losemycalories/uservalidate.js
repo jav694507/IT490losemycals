@@ -4,7 +4,6 @@ function verifynewuser()
 var fname = document.getElementById('fname').value;
 var lname = document.getElementById('lname').value;
 var dob = document.getElementById('dob').value;
-var uname = document.getElementById('uname').value;
 var email = document.getElementById('email').value;
 var passw = document.getElementById('passw').value;
 var passwc = document.getElementById('passwc').value;
@@ -57,20 +56,6 @@ bool = "false";
 }
 
 
-
-//username validation
-if(uname === "")
-{
-document.get.ElementById('req3').style.visibility = "visbile";
-bool = "false";
-}
-else
-{
-document.getElementById('req3').style.visbility = "hidden";
-}
-
-
-
 //email validation 
 if(!echeck.test(email))
 {
@@ -99,36 +84,27 @@ else if(passw.length <= length)
 document.getElementById('req5').style.visibility = "visible";
 bool = "false";
 }
-else
+else if(passwc != passw)
 {
-document.getElementById('req5').style.visibility = "hidden";
-}
-
-
-
-//check if password does not match confirm password
-if(passwc != passw)
-{
-document.getElementById('req5').style.visibility = "visible";
 document.getElementById('req6').style.visibility = "visible";
 bool = "false"
 }
 else
 {
 document.getElementById('req5').style.visibility = "hidden";
-document.getElementById('req6').style.visibility = "hidden";
+document.getElementById('req6').style.visibility = "visible";
 }
-
 
 //check if form is ready to send
 if (bool == "false")
 {
-alert("things are wrong");
+alert("Some input needs to be fixed");
 return false;
 }
 else
 {
 alert("Form Sent");
+window.location.href = "useq2.html";
 return true;
 }
 //else{
