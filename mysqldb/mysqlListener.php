@@ -7,6 +7,13 @@ require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('dbconnect.php');
 
+//error reporting
+$log_file = "./error.log";
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+ini_set('log_errors', 'On');
+ini_set('error_log', $log_file);
+#error_log("Mistake", 3, $log_file);
 //verifies the login for user in db
 function doLogin($email,$passw)
 {
